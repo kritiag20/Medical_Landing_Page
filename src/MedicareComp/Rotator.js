@@ -4,7 +4,7 @@ export class Rotator extends Component {
     render() {
         return (
             <div>
-                <div class="origin"></div>
+                <div class="origin">jhghv</div>
             </div>
         )
     }
