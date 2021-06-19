@@ -4,10 +4,15 @@ export class Hexagon extends Component {
     render() {
         return (
             <div>
-                 <div className="hexa-cont">
+                <div className="hexa-cont">
                     <div className="hexagon">
-                        <div class="hexa"><span>
-                            hrllo</span></div>
+                        <div class="hexa">
+                            <span>
+                                <div>
+                                    hrllo
+                                </div>
+                            </span>
+                        </div>
                     </div>
                     <div className="hexagon">
                         <div class="hexa"><span></span></div>
