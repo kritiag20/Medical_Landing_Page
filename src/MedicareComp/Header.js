@@ -5,7 +5,18 @@ export class Header extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                <div className="header-sec">
+                    <div className="head-col-1">
+                        mxklck
+                        <div>
+                <Navbar />
+                            enjfhey
+                        </div>
+                    </div>
+                    <div className="head-col-2">
+                        mxklck
+                    </div>
+                </div>
             </div>
         )
     }

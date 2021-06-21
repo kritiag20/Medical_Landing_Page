@@ -41,70 +41,246 @@ nav {
 .com-cont{
   margin-top: 100px;
   display: flex;
+  // position: relative;
   justify-content: center;
 }
 .com-cont2{
-  margin-top: -110px;
+  margin-top: -100px;
   // margin-left: 15rem;
+}
+.com-main{
+  height: 11.5rem;
+  width: 11.5rem;
+  margin: 25px;
+  transform: rotate(45deg);
+  border-radius: 20px;
+  border: 3px inset transparent;
+
+  &:hover{
+    border: 3px inset black;
+    animation: inherit;
+    animation-direction: reverse;
+ 
+  }
+  // &:before{
+  //   content: "nscyh";
+  //   transform: rotate(-45deg);
+  //   position: absolute;
+  //   z-index: 2;
+  // }
 }
 .com{
   height: 11rem;
   width: 11rem;
-  background-color: darkcyan;
+  background-color: rgba(26, 159, 161, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(45deg);
-  // border-left: 35px solid transparent;
-  // border-right: 35px solid red;
-  // border-top: 35px solid blue;
-  // border-bottom: 35px solid blue;
-  margin: 38px;
+  position: relative;
+  margin: 4px;
+  // transform-origin: center;
   border-radius: 20px;
+  &:hover{
+    animation: spin 5s cubic-bezier(.8, 0, .2, 1) infinite;
+    @keyframes spin {
+      50% { transform: rotate(180deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+
 }
+.text-cont{
+  height: 8rem;
+  width: 8rem;
+  transform: rotate(-45deg);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: inherit;
+  animation-direction: reverse;
+}
+
+
+
+
+
+
+
+// .com-main:hover{
+//   border-left: 2px inset red;
+//   border-right: 2px inset red;
+//   border-top: 2px inset blue;
+//   border-bottom: 2px inset blue;
+//   // padding: 3px;
+// }
 
 .hexa-cont{
   display: flex;
   justify-content: center;
   
 }
-.hexagon {
-  width: 100px;
-  height: 55px;
+.hexagon1{
+  margin-left: 6px;
+}
+.hexa {
+  width: 10rem;
+  height: 7.1rem;
+  // border: 1px solid;
+  margin: 31px 25px;
   position: relative;
+  // background-color: darkcyan;
+  animation: spin 7s cubic-bezier(.8, 0, .2, 1) infinite;
+  @keyframes spin {
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+  &:before, &:after{
+    background-color: darkcyan;
+    content: "";
+    position: absolute;
+    left: 22px;
+    width: 7.5rem;
+    height: 7rem;
+    transform: rotate(148deg) skew(28deg);
+    border-radius: 10px;
+  }
+  &:before{
+    top: -55px;
+  }
+  &:after{
+    top: 50px;
+  }
+  & span {
+    position: absolute;
+    top: -6px;
+    left: -18.9px;
+    width: 12.65rem;
+    height: 7.43rem;
+    background: darkcyan;
+    z-index: 1;
+    border-radius: 10px;
+  }
 }
 
-.hexagon, 
-.hexagon:before, 
-.hexagon:after {
-  background: red;
-  box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+.grid {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 50px 1fr 2fr;
+  }
+
+/************===== Nesting in SASS =====**************/
+// .enlarge {
+//   font-size: 14px;
+//   transition: {
+//     property: font-size;
+//     duration: 4s;
+//     delay: 2s;
+//   }
+
+//   &:hover { font-size: 36px; }
+// }
+
+/*===========Another Example============*/
+// .alert {
+//   // The parent selector can be used to add pseudo-classes to the outer
+//   // selector.
+//   &:hover {
+//     font-weight: bold;
+//   }
+
+//   // It can also be used to style the outer selector in a certain context, such
+//   // as a body set to use a right-to-left language.
+//   [dir=rtl] & {
+//     margin-left: 0;
+//     margin-right: 10px;
+//   }
+
+//   // You can even use it as an argument to pseudo-class selectors.
+//   :not(&) {
+//     opacity: 0.8;
+//   }
+// }
+
+/*$$$$$$$$$$$$$$$$$$$==============Rotator===========$$$$$$$$$$$$$$$$$$$*/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+
+.origin {
+  width: 10rem;
+  height: 10em;
+  /* font-size: 13vmin; */
+  position: relative;
+  background: rgba(0,0,0,.4);
+  transform-origin: center center;
+  animation: spin 6s cubic-bezier(.8, 0, .2, 1) infinite;
+  @keyframes spin {
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px red;
+    transform-origin: inherit;
+    // visibility: hidden;
+  }
+
+  &:before { 
+    animation: inherit;
+    animation-direction: reverse;
+    text-shadow: 0 1px 0 #000;
+
+    font-size: .11em;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.2em;
+    content: "jifh";
+    display: flex;
+    text-align: center;
+    word-break: keep-all;
+    align-items: center;
+    z-index: 2;
+  }
+
+  &:after {
+    // background: red;
+    transform: scale(0.1); 
+  }
 }
 
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  left: 22px;
-  width: 85px;
-  height: 85px;
-  transform: rotate(145deg) skew(18.5deg);
-}
+/* ---------------------------------- */
 
-.hexagon:before {
-  top: -55px;
-}
 
-.hexagon:after {
-  top: 27px;
-}
+// html, body { 
+//   background: #00136c;
+// }
 
-.hexagon span {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 135px;
-  height: 80px;
-  background: red;
-  z-index: 1;
-}
+// .origin {
+//   background: #3b2c85;
+//   background: rgba(#85cfcb, .3);
+
+//   &:before { border: solid 1px #db3951; color: rgba(#FFF,.8); z-index: 5;}
+//   &:after { background: #db3951; }
+// }
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+
+// body {
+//   display: grid;
+//   grid-template: repeat(3, auto) / repeat(3, auto);
+//   grid-gap: 1em;
+// }
+

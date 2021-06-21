@@ -11,6 +11,23 @@ export class Company extends Component {
                     <div className="com-main">
                         <div className="com"></div>
                     </div>
+
+                    <div>
+                        <div className="com-main">
+                            <div className="com">
+                                <div className="text-cont">Hello</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="com-main">
+                        <div className="com"></div>
+                    </div>
+                    <div className="com-main">
+                        <div className="com"></div>
+                    </div>
+                </div>
+                <div className="com-cont com-cont2">
                     <div className="com-main">
                         <div className="com"></div>
                     </div>
@@ -20,54 +37,14 @@ export class Company extends Component {
                     <div className="com-main">
                         <div className="com"></div>
                     </div>
+                    <div className="com-main">
+                        <div className="com"></div>
+                    </div>
+
                 </div>
 
-                {/* <div className="com-cont com-cont2">
-                    <div className="com">
-                    </div>
-                    <div className="com">
-                    </div>
-                    <div className="com">
-                    </div>
-                    <div className="com">
-                    </div>
-                </div> */}
-                <div className="hexa-cont">
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                </div>
-                <div className="hexa-cont hexagon1">
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                    <div className="hexagon">
-                        <div class="hexa"><span></span></div>
-                    </div>
-                </div>
-                {/* <div className="hexagon">
-                    <div class="hexa"><span>
-                        <div class="hexa"><span></span></div>
-                    </span></div>
-                </div> */}
+
+
             </div>
         )
     }
