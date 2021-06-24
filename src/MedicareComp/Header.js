@@ -9,8 +9,15 @@ export class Header extends Component {
                     <div className="head-col-1">
                         mxklck
                         <div>
-                <Navbar />
-                            enjfhey
+                            <Navbar />
+                            <div className="head-main">
+                                <div>
+                                    We Inspire you.
+                                </div>
+                                <div>
+                                    Your trust is our greatest initiatives.
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="head-col-2">
